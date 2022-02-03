@@ -1,0 +1,3 @@
+interface BaseCrawler{
+    crawl():void
+}

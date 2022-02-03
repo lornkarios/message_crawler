@@ -1,5 +1,6 @@
 FROM node:12-slim
 
+#установим браузер и все что для него нужно
 RUN apt-get update && \
 apt-get install -yq gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \
@@ -10,3 +11,8 @@ ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils 
 wget https://github.com/Yelp/dumb-init/releases/download/v1.2.1/dumb-init_1.2.1_amd64.deb && \
 dpkg -i dumb-init_*.deb && rm -f dumb-init_*.deb && \
 apt-get clean && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
+
+#установим typescript
+RUN npm install -g typescript
+
+WORKDIR /var/www

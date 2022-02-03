@@ -1,3 +1,5 @@
 /node_modules
 /screenshots
-creds.js
+src/creds.ts
+/dist
+/.idea
