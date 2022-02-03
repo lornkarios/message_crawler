@@ -1,0 +1,8 @@
+version: '1.0'
+services:
+  puppeteer-chrome-linux:
+    build:
+      context: docker/puppeteer-chrome-linux
+    volumes:
+      - .:/var/www
+    tty: true
