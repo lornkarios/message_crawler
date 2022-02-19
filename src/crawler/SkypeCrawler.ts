@@ -65,7 +65,7 @@ export class SkypeCrawler extends BaseCrawler {
                 let indicatorElem = dialog.parentElement.children[2].children[1];
 
                 if(indicatorElem){
-                    return {time:time,message:message,author:author};
+                    return {time:time,text:message,author:author};
                 }else{
                     return null;
                 }
