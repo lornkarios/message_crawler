@@ -1,8 +1,9 @@
 const path = require('path');
-const externals = require('webpack-node-externals') ;
+const externals = require('webpack-node-externals');
+const webpack = require('webpack')
 
 module.exports = {
-    mode: "production",
+    mode: "development",
     entry: "./src/index.ts",
     target: "node",
     output: {
