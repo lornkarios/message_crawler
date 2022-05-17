@@ -37,11 +37,11 @@ export class SkypeCrawler extends BaseCrawler {
 
 
         //нажмем кнопку того что мы не хотим выходить из системы
-        await this.page.waitForTimeout(10000);
+        await this.page.waitForSelector(NOT_GO_FROM_SYSTEM_SELECTOR,{visible:true});
 
         await this.page.click(NOT_GO_FROM_SYSTEM_SELECTOR);
 
-        await this.page.waitForSelector(MAIN_DIALOG_SELECTOR,{timeout:30000});
+        await this.page.waitForSelector(MAIN_DIALOG_SELECTOR,{timeout:60000});
     }
 
 
@@ -64,7 +64,7 @@ export class SkypeCrawler extends BaseCrawler {
 
                 let indicatorElem = dialog.parentElement.children[2].children[1];
 
-                if(indicatorElem){
+                if(indicatorElem && message){
                     return {time:time,text:message,author:author};
                 }else{
                     return null;

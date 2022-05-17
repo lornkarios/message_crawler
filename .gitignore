@@ -3,3 +3,5 @@
 src/creds.ts
 /dist
 /.idea
+/chrome-win
+*.jpg

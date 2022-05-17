@@ -1,6 +1,10 @@
 module.exports = {
     skype:{
-        username: 'username',
+        email: 'username',
+        password: 'password'
+    },
+    zorg1c: {
+        login: 'login',
         password: 'password'
     }
 }
